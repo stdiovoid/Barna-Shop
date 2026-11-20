@@ -1,14 +1,7 @@
-const shopProducts = [];
-
-function addProduct(title, description, price, image, buyLink) {
-    const product = {
-        id: Date.now(),
-        title,
-        description,
-        price,
-        image,
-        buyLink
-    };
-
-    shopProducts.push(product);
+async function getProducts() {
+    const response = await fetch("products.json");
+    if (!response.ok) {
+        throw new Error("خطا در دریافت محصولات");
+    }
+    return await response.json();
 }
