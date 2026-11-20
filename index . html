@@ -1,14 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اکانت کالاف دیوتی | برنا شاپ</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>برنا شاپ</h1>
-    <p>فروش اکانت کالاف دیوتی</p>
+<header>
+    <div class="logo">BARNA SHOP</div>
+    <div>فروشگاه اکانت کالاف دیوتی</div>
+</header>
+
+<section class="hero">
+    <h1>به برنا شاپ خوش آمدید</h1>
+    <p>خرید اکانت کالاف دیوتی با بهترین قیمت و کیفیت</p>
+</section>
+
+<section class="products">
+    <h2>اکانت‌های موجود</h2>
+
+    <div class="product-grid" id="products">
+        <p>به‌زودی اکانت‌های فروشگاه اضافه می‌شوند.</p>
+    </div>
+</section>
+
+<footer>
+    <p>برای خرید و دریافت اطلاعات بیشتر به روبیکای ما پیام دهید.</p>
+    <br>
+    <a href="https://rubika.ir/Studivoid" target="_blank">کانال Studio Void</a>
+    <br><br>
+    <small>ساخته شده با استدیو ووید</small>
+</footer>
 
 </body>
 </html>
+
