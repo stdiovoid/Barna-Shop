@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b0d12"><title>مدیریت | برنا شاپ</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="admin.css"></head>
+<body><header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">B</span><span>BARNA <b>SHOP</b><small>پنل مدیریت فروشگاه</small></span></a><a class="telegram-link" href="index.html">مشاهده فروشگاه ↗</a></header>
+<main class="admin-wrap">
+  <div class="admin-heading"><span class="eyebrow">CONTROL CENTER</span><h1>مدیریت فروشگاه</h1><p>محصولات را اضافه، ویرایش یا حذف کن و در پایان از کاتالوگ خروجی بگیر.</p></div>
+  <div class="notice"><b>نکته مهم:</b> این نسخه روی GitHub Pages اجرا می‌شود؛ اطلاعات پنل فقط در همین مرورگر ذخیره می‌شود. برای نمایش تغییرات به مشتری‌ها باید فایل کاتالوگ خروجی را در مخزن جایگزین کنی. رمز این نسخه هم امنیت سروری ندارد.</div>
+  <section class="admin-card" id="loginPanel"><h2>ورود مدیر</h2><label for="password">رمز مدیریت</label><input id="password" type="password" placeholder="رمز را وارد کن"><button class="gold-button" id="loginBtn">ورود به پنل</button><p class="error" id="loginError"></p></section>
+  <section id="dashboard" hidden>
+    <div class="admin-card"><div class="card-title"><h2 id="formTitle">افزودن اکانت جدید</h2><button class="subtle-btn" id="cancelEdit" hidden>لغو ویرایش</button></div>
+      <form id="productForm">
+        <input type="hidden" id="editId">
+        <label for="title">عنوان اکانت</label><input id="title" required maxlength="90" placeholder="مثلاً اکانت لجندری">
+        <label for="description">توضیحات</label><textarea id="description" rows="3" maxlength="700" placeholder="جزئیات اکانت را بنویس..."></textarea>
+        <div class="form-row"><div><label for="price">قیمت (تومان)</label><input id="price" type="number" min="0" required placeholder="مثلاً 2500000"></div><div><label for="status">وضعیت</label><select id="status"><option value="available">موجود</option><option value="sold">فروخته شده</option></select></div></div>
+        <label for="images">تصاویر اکانت (چند عکس از گالری)</label><input id="images" type="file" accept="image/*" multiple>
+        <small class="hint">عکس‌ها در همین مرورگر ذخیره می‌شوند. حجم هر عکس به‌صورت خودکار کم می‌شود.</small>
+        <div class="preview-row" id="imagePreview"></div>
+        <button class="gold-button" type="submit" id="saveBtn">ثبت محصول</button><p class="success" id="formMessage"></p>
+      </form>
+    </div>
+    <div class="admin-card"><div class="card-title"><h2>تنظیمات سفارش</h2></div><label for="orderLink">لینک روبیکا برای سفارش</label><input id="orderLink" type="url" placeholder="https://rubika.ir/Studivoid"><button class="gold-button" id="saveSettings">ذخیره تنظیمات</button></div>
+    <div class="admin-card"><div class="card-title"><h2>فهرست محصولات</h2><span id="adminCount" class="count"></span></div><div id="adminProducts" class="admin-products"></div></div>
+    <div class="admin-card"><h2>پشتیبان‌گیری و انتقال به سایت</h2><p class="hint">برای اینکه مشتری‌ها هم محصولات جدید را ببینند، کاتالوگ را دانلود کن و در مرحله بعد فایل products.json را در GitHub با آن جایگزین کن.</p><div class="export-actions"><button class="gold-button" id="exportBtn">دانلود کاتالوگ محصولات</button><label class="import-btn">وارد کردن کاتالوگ<input id="importFile" type="file" accept="application/json"></label></div></div>
+  </section>
+</main><footer><div class="copyright">ساخته شده با <a href="https://rubika.ir/Studivoid">استدیو ووید</a></div></footer><script src="admin.js"></script></body></html>
