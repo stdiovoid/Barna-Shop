@@ -1,0 +1,12 @@
+function loginAdmin() {
+    const password = document.getElementById("adminPassword").value;
+    const message = document.getElementById("loginMessage");
+
+    if (password === "8888") {
+        message.textContent = "ورود آزمایشی موفق بود!";
+        message.style.color = "#4caf50";
+    } else {
+        message.textContent = "رمز عبور اشتباه است!";
+        message.style.color = "#ff4444";
+    }
+}
