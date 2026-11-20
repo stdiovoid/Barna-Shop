@@ -17,25 +17,47 @@
 
 <section class="products">
     <div class="admin-container">
-        <div class="admin-panel">
+
+        <div class="admin-panel" id="loginPanel">
             <h2>ورود مدیر فروشگاه</h2>
+            <p class="admin-description">رمز مدیریت را وارد کنید.</p>
 
-            <p class="admin-description">
-                برای ورود به بخش مدیریت، رمز عبور را وارد کنید.
-            </p>
-
-            <input
-                type="password"
-                id="adminPassword"
-                placeholder="رمز عبور"
-            >
+            <input type="password" id="adminPassword" placeholder="رمز عبور">
 
             <button class="admin-button" onclick="loginAdmin()">
-                ورود به مدیریت
+                ورود
             </button>
 
             <p id="loginMessage"></p>
         </div>
+
+        <div class="admin-panel" id="adminDashboard" hidden>
+            <h2>مدیریت محصولات</h2>
+
+            <h3>افزودن اکانت جدید</h3>
+
+            <input type="text" id="productTitle" placeholder="عنوان اکانت">
+
+            <textarea id="productDescription" placeholder="توضیحات اکانت"></textarea>
+
+            <input type="number" id="productPrice" placeholder="قیمت به تومان">
+
+            <label>انتخاب چند عکس از گالری:</label>
+            <input type="file" id="productImages" accept="image/*" multiple>
+
+            <label>وضعیت محصول:</label>
+            <select id="productStatus">
+                <option value="available">موجود</option>
+                <option value="sold">فروخته شده</option>
+            </select>
+
+            <button class="admin-button" onclick="saveProduct()">
+                ثبت اکانت
+            </button>
+
+            <div id="productMessage"></div>
+        </div>
+
     </div>
 </section>
 
