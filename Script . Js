@@ -1,0 +1,32 @@
+
+const products = [];
+
+function renderProducts() {
+    const container = document.getElementById("products");
+
+    if (!container) return;
+
+    if (products.length === 0) {
+        container.innerHTML = `
+            <div class="empty-products">
+                <h3>🎮 هنوز اکانتی موجود نیست</h3>
+                <p>به‌زودی اکانت‌های جدید به برنا شاپ اضافه می‌شوند.</p>
+            </div>
+        `;
+        return;
+    }
+
+    container.innerHTML = products.map(product => `
+        <article class="product-card">
+            <img src="${product.image}" alt="${product.title}">
+            <h3>${product.title}</h3>
+            <p>${product.description}</p>
+            <div class="price">${product.price}</div>
+            <a class="buy-button" href="${product.buyLink}">
+                خرید و سفارش
+            </a>
+        </article>
+    `).join("");
+}
+
+renderProducts();
