@@ -1,17 +1,15 @@
 function loginAdmin() {
     const password = document.getElementById("adminPassword").value;
-    const message = document.getElementById("loginMessage");
 
     if (password === "8888") {
         document.getElementById("loginPanel").hidden = true;
         document.getElementById("adminDashboard").hidden = false;
     } else {
-        message.textContent = "رمز عبور اشتباه است!";
-        message.style.color = "#ff4444";
+        document.getElementById("loginMessage").textContent =
+            "رمز عبور اشتباه است!";
     }
 }
 
 function saveProduct() {
-    document.getElementById("productMessage").textContent =
-        "فرم آماده ثبت محصول است؛ اتصال ذخیره‌سازی در مرحله بعد انجام می‌شود.";
+    alert("برای ذخیره واقعی محصولات باید اتصال GitHub را پیاده‌سازی کنیم.");
 }
