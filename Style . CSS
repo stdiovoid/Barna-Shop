@@ -118,3 +118,17 @@ footer a {
         font-size: 27px;
     }
 }
+.admin-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 10px;
+    color: #555b68;
+    text-decoration: none;
+    opacity: 0.35;
+    transition: 0.3s;
+}
+
+.admin-link:hover {
+    opacity: 1;
+    color: #f5b942;
+}
