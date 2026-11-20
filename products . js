@@ -1,0 +1,14 @@
+const shopProducts = [];
+
+function addProduct(title, description, price, image, buyLink) {
+    const product = {
+        id: Date.now(),
+        title,
+        description,
+        price,
+        image,
+        buyLink
+    };
+
+    shopProducts.push(product);
+}
