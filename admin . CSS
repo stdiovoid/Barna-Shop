@@ -1,0 +1,48 @@
+.admin-container {
+    max-width: 1000px;
+    margin: 45px auto;
+    padding: 25px;
+}
+
+.admin-title {
+    color: #f5b942;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.admin-description {
+    color: #aeb5c5;
+    margin-bottom: 30px;
+}
+
+.admin-panel {
+    background: #151a28;
+    border: 1px solid #292f40;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.admin-panel h2 {
+    color: #f5b942;
+    margin-bottom: 20px;
+}
+
+.admin-button {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #f5b942;
+    color: #111;
+    border: none;
+    border-radius: 9px;
+    font-family: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .admin-container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+}
