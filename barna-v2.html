@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0d12">
+  <title>برنا شاپ | فروشگاه اکانت کالاف دیوتی</title>
+  <meta name="description" content="فروشگاه اکانت کالاف دیوتی برنا شاپ">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="barna-v2.html"><span class="brand-mark">B</span><span>BARNA <b>SHOP</b><small>فروشگاه اکانت کالاف دیوتی</small></span></a>
+  <a class="telegram-link" href="barna-v2-events.html">ایونت‌ها و مسابقات ↗</a>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">CALL OF DUTY ACCOUNT STORE</span>
+      <h1>اکانت مورد علاقه‌ات<br><em>اینجا منتظرته</em></h1>
+      <p>مشاهده اکانت‌ها، بررسی تصاویر و ثبت سفارش از طریق روبیکا.</p>
+      <a class="gold-btn" href="#catalog">مشاهده اکانت‌ها <span>←</span></a>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="art-ring"></div><div class="art-glow"></div>
+      <div class="art-card"><span>BARNA</span><strong>SHOP</strong><small>CODM • ACCOUNTS</small></div>
+      <div class="art-chip">PREMIUM<br>ACCOUNTS</div>
+    </div>
+  </section>
+  <section class="catalog section" id="catalog">
+    <div class="section-head">
+      <div><span class="eyebrow">STORE CATALOG</span><h2>اکانت‌های فروشگاه</h2></div>
+      <span class="count" id="productCount">۰ محصول</span>
+    </div>
+    <div class="filters">
+      <input id="searchInput" type="search" placeholder="جست‌وجوی اکانت..." aria-label="جست‌وجوی اکانت">
+      <select id="statusFilter" aria-label="فیلتر وضعیت"><option value="all">همه اکانت‌ها</option><option value="available">فقط موجودها</option><option value="sold">فروخته‌شده</option></select>
+    </div>
+    <div class="product-grid" id="products"></div>
+    <div class="empty-state" id="emptyState"><div class="empty-icon">◇</div><h3>هنوز اکانتی ثبت نشده</h3><p>به‌زودی محصولات جدید اینجا قرار می‌گیرند.</p></div>
+  </section>
+  <section class="trust-strip">
+    <div><b>01</b><span>مشاهده جزئیات و تصاویر</span></div><div><b>02</b><span>بررسی قیمت و وضعیت</span></div><div><b>03</b><span>ثبت سفارش در روبیکا</span></div>
+  </section>
+</main>
+<footer><div class="footer-brand">BARNA SHOP</div><p>برای پرسش و ثبت سفارش از طریق روبیکا پیام بده.</p><div class="copyright">© برنا شاپ · ساخته شده با <a href="https://rubika.ir/Studivoid" target="_blank" rel="noopener">استدیو ووید</a><a class="admin-link" href="barna-v2-admin.html">مدیریت</a></div></footer>
+<div class="lightbox" id="lightbox" hidden><button class="lightbox-close" id="closeLightbox" aria-label="بستن">×</button><button class="lightbox-arrow prev" id="prevImage">‹</button><img id="lightboxImage" alt="تصویر اکانت"><button class="lightbox-arrow next" id="nextImage">›</button><div class="lightbox-caption" id="lightboxCaption"></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="barna-v2-client.js"></script>
+<script src="barna-v2-app.js"></script>
+</body></html>
