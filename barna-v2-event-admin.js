@@ -71,7 +71,15 @@ $("draw").onclick=async()=>{
  const {data:p,error}=await barnaDb.from("event_registrations").select("*").eq("event_id",id).eq("status","approved");
  if(error)return alert(error.message);if(!p.length)return alert("بازیکن تأییدشده‌ای وجود ندارد.");
  for(let i=p.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[p[i],p[j]]=[p[j],p[i]];}
- const {error:delErr}=await barnaDb.from("event_teams").delete().eq("event_id",id);if(delErr)return alert(delErr.message);
+ const {data:oldTeams,error:oldErr}=await barnaDb.from("event_teams").select("id").eq("event_id",id);
+ if(oldErr)return alert(oldErr.message);
+ const oldIds=(oldTeams||[]).map(t=>t.id);
+ if(oldIds.length){
+  const {error:membersErr}=await barnaDb.from("event_team_members").delete().in("team_id",oldIds);
+  if(membersErr)return alert(membersErr.message);
+  const {error:teamsErr}=await barnaDb.from("event_teams").delete().eq("event_id",id);
+  if(teamsErr)return alert(teamsErr.message);
+ }
  const groups=[];for(let i=0;i<p.length;i+=e.team_size)groups.push(p.slice(i,i+e.team_size));
  let teamMarkup=[];
  for(let i=0;i<groups.length;i++){

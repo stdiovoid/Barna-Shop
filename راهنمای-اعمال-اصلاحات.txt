@@ -1,0 +1,18 @@
+اصلاحات برنا شاپ - بدون دست‌زدن به فایل‌های قدیمی
+
+این بسته فقط فایل‌های نسخه جدید barna-v2 را دارد و فایل‌های قدیمی index.html، app.js، admin.js، style.css و موارد مشابه را تغییر نمی‌دهد.
+
+۱) در GitHub وارد مخزن Barna-Shop و شاخه main شو.
+۲) فایل barna-v2-events.html را با فایل هم‌نام داخل ZIP جایگزین کن.
+۳) فایل barna-v2-event-admin.html را با فایل هم‌نام داخل ZIP جایگزین کن.
+۴) فایل barna-v2-event-admin.js را با فایل هم‌نام داخل ZIP جایگزین کن.
+۵) فایل SQL را در Supabase SQL Editor اجرا نکن؛ این اصلاح ظرفیت قبلاً روی دیتابیس پروژه اعمال و آزمایش شده است. فایل SQL فقط نسخه پشتیبان/مرجع تغییر است.
+
+لینک‌های مورد انتظار:
+صفحه اصلی: https://stdiovoid.github.io/Barna-Shop/barna-v2.html
+پنل فروشگاه: https://stdiovoid.github.io/Barna-Shop/barna-v2-admin.html
+ایونت‌ها: https://stdiovoid.github.io/Barna-Shop/barna-v2-events.html
+پنل ایونت: https://stdiovoid.github.io/Barna-Shop/barna-v2-event-admin.html
+
+نکته ورود:
+در این نسخه، پنل مدیر هنوز از Supabase Auth با ایمیل و رمز استفاده می‌کند. ورود فقط با رمز 8888 در وضعیت فعلی فعال نشده است؛ فعال‌کردن ظاهری آن بدون احراز هویت سمت سرور، اطلاعات مشتریان و پنل را ناامن می‌کند.
